@@ -20,10 +20,14 @@ vector <long> creditCard;
     
     cout << "Please Input your credit card number.\n";
     cin >> num;
+    
+    //For loop to know if it's a credit card with 14 or 16 numbers
+    
     for(int i = 0; i <= num; i++){
         creditCard.push_back(num);
     }
 
+    //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
     
     if (creditCard.size() == 14){
         for (i = 0; i <= creditCard.size(); i = i + 2){
@@ -36,6 +40,8 @@ vector <long> creditCard;
             
         }
         
+        //Add all the even and all the odds
+        
         for(i = 0; i <= luhn.size(); i++){
             Luhn = Luhn + luhn[i];
 
@@ -45,6 +51,7 @@ vector <long> creditCard;
 
         }
 
+        //Add them toghether and see if it can be divided by 10
         sum = Luhn + Luhn1;
         if(sum % 10 == 0){
             cout << "Your card number " << num << " is valid.\n";
@@ -54,7 +61,7 @@ vector <long> creditCard;
         }
     }
     
-    
+    //Same as the if
     else {
         for (i = 0; i <= creditCard.size(); i = i + 2){
             if(i % 2 == 0){
