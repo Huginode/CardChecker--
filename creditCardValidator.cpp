@@ -31,10 +31,12 @@ vector <int> creditCard;
     
     cout << "Please Input your credit card number.\n";
     cin >> num;
+
+    
     
     //For loop to know if it's a credit card with 14 or 16 numbers
     
-    for(int i = 0; i <= num; i++){
+    for(int i = 0; i <= to_string(num).length(); i++){
         creditCard.push_back(num);
     }
 
@@ -80,22 +82,24 @@ vector <int> creditCard;
             if(i % 2 == 0){
                 push = creditCard[i]*2;
                 luhn.push_back(push);
+                cout << "push" << push << endl;
             }
             else {
                 push = creditCard[i]*2;
                 luhn1.push_back(push);
+                cout << "push " << push << endl;
             }
             
         }
         
         for(i = 0; i <= luhn.size(); i++){
             Luhn = Luhn + luhn[i];
-
+            cout << "Luhn "  << Luhn << endl;
         }
 
         for(i = 0; i <= luhn1.size(); i++){
             Luhn1 = Luhn1 + luhn1[i];
-
+            cout << "Luhn1 " << Luhn1 << endl;
         }
 
         sum = Luhn + Luhn1;
