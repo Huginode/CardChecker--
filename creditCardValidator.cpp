@@ -43,8 +43,8 @@ vector <int> creditCard;
         }
     }
 
-    else if (to_string(num).length() == 3) {
-        for (int i = 2; i >= 0; i--) {
+    else if (to_string(num).length() == 14) {
+        for (int i = 13; i >= 0; i--) {
         array[i] = num % 10;
         num /= 10;
         }
@@ -94,34 +94,30 @@ vector <int> creditCard;
             cout << "Your card number " << num << " is valid.\n";
         }
         else {
-            cout << "Your card number " << num << " is valid.\n";
+            cout << "Your card number " << num << " is invalid.\n";
         }
     }
     
     //Same as the if
     else {
-        for (i = 0; i <= creditCard.size(); i = i + 2){
+        for (i = 0; i <= creditCard.size(); i++){
             if(i % 2 == 0){
                 push = creditCard[i]*2;
-                luhn.push_back(push);
-                cout << "push" << push << endl;
+                luhn.push_back(push);    
             }
             else {
                 push = creditCard[i]*2;
-                luhn1.push_back(push);
-                cout << "push " << push << endl;
+                luhn1.push_back(push);    
             }
             
         }
         
         for(i = 0; i <= luhn.size(); i++){
-            Luhn = Luhn + luhn[i];
-            cout << "Luhn "  << Luhn << endl;
+            Luhn = Luhn + luhn[i];    
         }
 
         for(i = 0; i <= luhn1.size(); i++){
-            Luhn1 = Luhn1 + luhn1[i];
-            cout << "Luhn1 " << Luhn1 << endl;
+            Luhn1 = Luhn1 + luhn1[i];    
         }
 
         sum = Luhn + Luhn1;
@@ -129,7 +125,7 @@ vector <int> creditCard;
             cout << "Your card number " << num << " is valid.\n";
         }
         else {
-            cout << "Your card number " << num << " is valid.\n";
+            cout << "Your card number " << num << " is invalid.\n";
         }
     }
 
