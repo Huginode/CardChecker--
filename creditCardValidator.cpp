@@ -28,16 +28,38 @@ vector <int> creditCard;
 
 
 
+
     
     cout << "Please Input your credit card number.\n";
     cin >> num;
+    int array[to_string(num).length()];
+    
+    // convert num to string
+    
+    if(to_string(num).length() == 16){
+        for (int i = 15; i >= 0; i--) {
+        array[i] = num % 10;
+        num /= 10;
+        }
+    }
 
+    else if (to_string(num).length() == 3) {
+        for (int i = 2; i >= 0; i--) {
+        array[i] = num % 10;
+        num /= 10;
+        }
+    }
+
+    else {
+        cout << "Card number invalid please try again.\n";
+    }
+
+
+
+    //For loop to push the array in the vector
     
-    
-    //For loop to know if it's a credit card with 14 or 16 numbers
-    
-    for(int i = 0; i <= to_string(num).length(); i++){
-        creditCard.push_back(num);
+    for(int i = 0; i <= to_string(num).length() + 1; i++){
+        creditCard.push_back(array[i]);
     }
 
     //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
