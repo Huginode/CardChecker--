@@ -25,9 +25,8 @@ long sum = 0;
 vector <int> luhn;
 vector <int> luhn1;
 vector <int> creditCard;
-vector <int> creditCardLenght;
-
    
+    
     cout << "Please Input your credit card number.\n";
     cin >> num;
     long snum = num;
@@ -39,6 +38,7 @@ vector <int> creditCardLenght;
         for (int i = to_string(num).length(); i >= 1; i--) {
         array[i] = num % 10;
         num /= 10;
+        cout << "array " << array[i] << endl;
         }
     }
     
@@ -51,7 +51,9 @@ vector <int> creditCardLenght;
     //For loop to push the array in the vector
     
     for(int i = 0; i <= to_string(num).length() + 1; i++){
-        creditCard.push_back(array[i]);
+        int arr = array[i];
+        creditCard.push_back(arr);
+        cout << "arr " << arr << endl;
     }
 
     //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
@@ -61,10 +63,12 @@ vector <int> creditCardLenght;
             if(i % 2 == 0){
                 push = creditCard[i]*2;
                 luhn.push_back(push);
+                cout << "push " << push << endl;
             }
             else {
                 push = creditCard[i]*2;
                 luhn1.push_back(push);
+                cout << "push" << push << endl;
             }
             
         }

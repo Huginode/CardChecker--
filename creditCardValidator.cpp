@@ -25,13 +25,11 @@ long sum = 0;
 vector <int> luhn;
 vector <int> luhn1;
 vector <int> creditCard;
-
-
-
-
+ 
     
     cout << "Please Input your credit card number.\n";
     cin >> num;
+    long snum = num;
     int array[to_string(num).length()];
     
     // convert num to string
@@ -91,10 +89,10 @@ vector <int> creditCard;
         //Add them toghether and see if it can be divided by 10
         sum = Luhn + Luhn1;
         if(sum % 10 == 0){
-            cout << "Your card number " << num << " is valid.\n";
+            cout << "Your card number " << snum << " is valid.\n";
         }
         else {
-            cout << "Your card number " << num << " is invalid.\n";
+            cout << "Your card number " << snum << " is invalid.\n";
         }
     }
     
@@ -122,10 +120,10 @@ vector <int> creditCard;
 
         sum = Luhn + Luhn1;
         if(sum % 10 == 0){
-            cout << "Your card number " << num << " is valid.\n";
+            cout << "Your card number " << snum << " is valid.\n";
         }
         else {
-            cout << "Your card number " << num << " is invalid.\n";
+            cout << "Your card number " << snum << " is invalid.\n";
         }
     }
 
