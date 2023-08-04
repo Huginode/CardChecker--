@@ -32,16 +32,16 @@ vector <int> creditCard;
     long snum = num;
     int array[to_string(num).length()];
     
-    // convert num to string
+    // convert num to array
     
-    if(to_string(num).length() == 16){
+    if(to_string(num).length() == 16 || to_string(num).length() == 15){
         for (int i = 15; i >= 0; i--) {
         array[i] = num % 10;
         num /= 10;
         }
     }
 
-    else if (to_string(num).length() == 14) {
+    else if (to_string(num).length() == 14 || to_string(num).length() == 13) {
         for (int i = 13; i >= 0; i--) {
         array[i] = num % 10;
         num /= 10;
