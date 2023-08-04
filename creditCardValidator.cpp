@@ -34,14 +34,14 @@ vector <int> creditCard;
     
     // convert num to array
     
-    if(to_string(num).length() == 16 || to_string(num).length() == 15){
+    if(to_string(num).length() == 16){
         for (int i = 15; i >= 0; i--) {
         array[i] = num % 10;
         num /= 10;
         }
     }
 
-    else if (to_string(num).length() == 14 || to_string(num).length() == 13) {
+    else if (to_string(num).length() == 14) {
         for (int i = 13; i >= 0; i--) {
         array[i] = num % 10;
         num /= 10;
@@ -63,13 +63,13 @@ vector <int> creditCard;
     //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
     
     if (creditCard.size() == 16){
-        for (i = 0; i <= creditCard.size(); i = i + 2){
+        for (i = 0; i <= creditCard.size(); i++){
             if(i % 2 == 0){
                 push = creditCard[i]*2;
                 luhn.push_back(push);
             }
             else {
-                push = creditCard[i]*2;
+                push = creditCard[i];
                 luhn1.push_back(push);
             }
             
@@ -104,7 +104,7 @@ vector <int> creditCard;
                 luhn.push_back(push);    
             }
             else {
-                push = creditCard[i]*2;
+                push = creditCard[i];
                 luhn1.push_back(push);    
             }
             
