@@ -10,8 +10,6 @@
     <li><a href="#diagram">Diagram</a></li>
     <li><a href="#installation instruction">Installation Instruction</a></li>
     <li><a href="#known issues">Known Issues</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -20,8 +18,10 @@
 CardChecker++ is a credit card validator written in c++. I implemented luhn's algorithm using the built in vector library in c++.
 
 ## Diagram
-
-https://prnt.sc/rz0K-V5O5vcT
+  
+  <a href="https://github.com/Huginode/CardChecker-">
+    <img src="images/diagram.png">
+  </a>
 
 ## Installation instruction
 
