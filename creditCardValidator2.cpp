@@ -14,6 +14,7 @@ long num = 0;
 //all the variables for Luhn's algorithm
 int Luhn = 0;
 int Luhn1 = 0;
+int Larray[2];
 
 //var created because of a segmentation fault
 int push = 0;
@@ -59,16 +60,25 @@ vector <int> creditCard;
     //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
     
 
-        for (i = 0; i <= creditCard.size(); i = i + 2){
+        for (i = 0; i <= creditCard.size(); i++){
             if(i % 2 == 0){
                 push = creditCard[i]*2;
-                luhn.push_back(push);
-                cout << "push " << push << endl;
+                if(push >= 10){
+                    for (int i = 1; i >= 0; i--) {
+                        Larray[i] = push % 10;
+                        push /= 10;
+                    }
+                    push = Larray[1] + Larray[2];
+                    luhn.push_back(push);
+                }
+                
+                else {
+                    luhn.push_back(push);
+                }
             }
             else {
-                push = creditCard[i]*2;
+                push = creditCard[i];
                 luhn1.push_back(push);
-                cout << "push" << push << endl;
             }
             
         }
