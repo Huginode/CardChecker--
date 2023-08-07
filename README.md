@@ -26,7 +26,7 @@ CardChecker++ is a credit card validator written in c++. I implemented luhn's al
 
 ## Diagram
   
- <a href="url"><img src="images/diagram.png" width="640" height="300" style="border-radius:50%"></a>
+ <a href="url"><img src="images/diagram.png" width="640" height="300" style="border-radius:90%"></a>
 
 ## Installation instruction
 
@@ -38,6 +38,8 @@ eg:
 ## Complexity
 
   ### Time Complexity
+  Since the algorithm consist mainly on looping over an array the time complexity of the algorithm is :
+  * O(n)
 
   ### Space Complexity
 
