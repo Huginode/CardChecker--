@@ -54,25 +54,45 @@ vector <int> creditCard;
         creditCard.push_back(arr);
     }
 
-    //Luhn's algorith : take every number with an even rank and an odd rank. Multiply them by 2.
+    //Luhn's algorith :
     
 
         for (i = 0; i <= creditCard.size(); i++){
-            if(i % 2 == 0){
-                push = creditCard[i]*2;
-                if(push >= 10){
-                    push = push - 9;
-                    luhn.push_back(push);
-                }
+            if(creditCard.size() % 2 == 0){
+                if(i % 2 == 0){
+                    push = creditCard[i]*2;
+                    if(push >= 10){
+                        push = push - 9;
+                        luhn.push_back(push);
+                    }
                 
-                else {
+                    else {
                     luhn.push_back(push);
+                    }
+                }
+                else {
+                    push = creditCard[i];
+                    luhn1.push_back(push);
                 }
             }
             else {
-                push = creditCard[i];
-                luhn1.push_back(push);
+                if(i % 2 != 0){
+                    push = creditCard[i]*2;
+                    if(push >= 10){
+                        push = push - 9;
+                        luhn.push_back(push);
+                    }
+                
+                    else {
+                    luhn.push_back(push);
+                    }
+                }
+                else {
+                    push = creditCard[i];
+                    luhn1.push_back(push);
+                }
             }
+
             
         }
         
