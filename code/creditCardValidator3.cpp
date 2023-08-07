@@ -3,6 +3,15 @@
 
 using namespace std;
 
+//Erase function to solve later problems
+
+template<typename T>
+void pop_front(std::vector<T> &v)
+{
+    if (v.size() > 0) {
+        v.erase(v.begin());
+    }
+}
 
 int main(){
     
@@ -49,11 +58,13 @@ vector <int> creditCard;
 
     //For loop to push the array in the vector
     
-    for(int i = 0; i <= to_string(num).length() + 1; i++){
-        int arr = array[i];
-        creditCard.push_back(arr);
+    for(int i = 0; i <= to_string(snum).length(); i++){
+        creditCard.push_back(array[i]);
     }
 
+    // Removing the first element of the vector because for no reason it is equal to -9000 something
+    pop_front(creditCard);
+    
     //Luhn's algorith :
     
 
