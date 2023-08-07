@@ -8,15 +8,15 @@
   <ol>
     <li><a href="#description">Description</a></li>
     <li><a href="#diagram">Diagram</a></li>
-    <li><a href="#installation instruction">Installation Instruction</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li>
       <a href="#complexity">Complexity</a>
       <ul>
-        <li><a href="#time complexity">Time Complexity</a></li>
-        <li><a href="#space complexity">Space Complexity</a></li>
+        <li><a href="#time">Time</a></li>
+        <li><a href="#space">Space</a></li>
       </ul>
     </li>
-    <li><a href="#known issues">Known Issues</a></li>
+    <li><a href="#issues">Issues</a></li>
   </ol>
 </details>
 
@@ -45,5 +45,5 @@ eg:
 
 ## Known Issues
 
-* The algorithm the numbers given to the algorithm are wrong which makes the result false.
+* The numbers given to the algorithm are wrong which makes the result false.
 
