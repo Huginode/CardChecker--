@@ -1,13 +1,8 @@
 #include <iostream>
 #include <vector>
+#include "functions.hpp"
 
 using namespace std;
-
-//Erase function to solve later problems
-
-template<typename T>
-void pop_front(std::vector<T> &v);
-
 
 int main(){
     
@@ -68,7 +63,7 @@ vector <int> creditCard;
             if(creditCard.size() % 2 == 0){
                 if(i % 2 == 0){
                     push = creditCard[i]*2;
-                    if(push >= 10){
+                    if(push > 9){
                         push = push - 9;
                         luhn.push_back(push);
                     }
@@ -85,7 +80,7 @@ vector <int> creditCard;
             else {
                 if(i % 2 != 0){
                     push = creditCard[i]*2;
-                    if(push >= 10){
+                    if(push > 9){
                         push = push - 9;
                         luhn.push_back(push);
                     }
