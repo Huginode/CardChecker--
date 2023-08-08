@@ -33,7 +33,7 @@ CardChecker++ is a credit card validator written in c++. I implemented luhn's al
 You can use it by downloading the creditCardValidator.cpp file and compiling it using g++ or gcc
 
 eg:
-* g++ creditCardValidator -o **name**
+* g++ creditCardValidator functions -o **name**
 
 ## Complexity
 
