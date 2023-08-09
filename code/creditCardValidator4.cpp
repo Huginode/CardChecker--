@@ -13,12 +13,10 @@ long num = 0;
 
 //all the variables for Luhn's algorithm
 int Luhn = 0;
+int Larray[3];
 
 //var created because of a segmentation fault
 int push = 0;
-
-//sum for the last step of the luhn's algorithm
-long sum = 0;
 
 //all the vectors for the luhn algorithm
 vector <int> luhn;
@@ -62,7 +60,11 @@ vector <int> creditCard;
                 if(i % 2 == 0){
                     push = creditCard[i]*2;
                     if(push > 9){
-                        push = push - 9;
+                        for (int i = 3; i >= 1; i--) {
+                        Larray[i] = push % 10;
+                        push /= 10;
+                        }
+                        push = Larray[0] + Larray[1];  
                         luhn.push_back(push);
                     }
                 
@@ -79,7 +81,11 @@ vector <int> creditCard;
                 if(i % 2 != 0){
                     push = creditCard[i]*2;
                     if(push > 9){
-                        push = push - 9;
+                        for (int i = 3; i >= 1; i--) {
+                        Larray[i] = push % 10;
+                        push /= 10;
+                        }
+                        push = Larray[0] + Larray[1];  
                         luhn.push_back(push);
                     }
                 
