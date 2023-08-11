@@ -57,7 +57,7 @@ vector <int> creditCard;
     //Luhn's algorith :
     
 
-        for (i = 0; i <= creditCard.size(); i++){
+        for (i = 0; i <= creditCard.size() - j; i++){
             if(creditCard.size() % 2 == 0){
                 if(i % 2 == 0){
                     push = creditCard[i]*2;
