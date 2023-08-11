@@ -37,6 +37,7 @@ This algorithm utilizes 3 steps.
   * From the rightmost digit double every second digit. (excluding the rightmost one)
   * For every doubled digit that is superior to 9 sum its two figures.
   * Then sum all the digits and see if the sum can be divided by 10.
+
 Source: https://youtu.be/wsphC8V36i0?list=LL
 
 ## Installation instruction

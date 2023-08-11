@@ -1,18 +1,21 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "functions.hpp"
 
 using namespace std;
 
 int main(){
     
-int i = 0;   
+int i = 0;
+int j = 0;
 
 //var for card number
 long num = 0;
 
 //all the variables for Luhn's algorithm
 int Luhn = 0;
+int tp = 0;
 
 //var created because of a segmentation fault
 int push = 0;
@@ -65,7 +68,9 @@ vector <int> creditCard;
                         luhnt.push_back(push % 10);
                         push /= 10;
                         }
-                        luhn.push_back(luhnt[i]+luhnt[i+1]+luhnt[i+2]);
+                        luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
+                        tp = luhnt[j]+luhnt[j+1];                       
+                        luhn.push_back(tp);
                     }
                 
                     else {
@@ -85,7 +90,9 @@ vector <int> creditCard;
                         luhnt.push_back(push % 10);
                         push /= 10;
                         }
-                        luhn.push_back(luhnt[i]+luhnt[i+1]+luhnt[i+2]);
+                        luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
+                        tp = luhnt[j]+luhnt[j+1];                        
+                        luhn.push_back(tp);
                     }
                 
                     else {
