@@ -34,9 +34,10 @@ CardChecker++ is a credit card validator written in c++. I implemented luhn's al
 Figuring how the luhn algorithm works is by far the hardest thing I had to do for this projects.
 It's not necessarily complicated, it's just that there either no explanations, or wrong ones, or it's uncomprehensible.
 This algorithm utilizes 3 steps.
-  * From the rightmost digit double every second digit. (including the rightmost one)
+  * From the rightmost digit double every second digit. (excluding the rightmost one)
   * For every doubled digit that is superior to 9 sum its two figures.
-  * Then sum all the digits, including the unmodified ones and see if the sum can be divided by 10.
+  * Then sum all the digits and see if the sum can be divided by 10.
+Source: https://youtu.be/wsphC8V36i0?list=LL
 
 ## Installation instruction
 
