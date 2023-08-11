@@ -39,6 +39,15 @@ This algorithm utilizes 3 steps.
   * Then sum all the digits and see if the sum can be divided by 10.
 
 Source: https://youtu.be/wsphC8V36i0?list=LL
+Example:
+4847 3529 8926 3094
+
+ * Sum of odd places:  4 + 0 + 6 + 9 + 9 + 5 + 7 + 8 = 48
+ * Sum of even places: 9   3   2   8   2   3   4   4
+                       18          16 
+                       9 + 6 + 4 + 7 + 4 + 6 + 8 + 8 = 52
+ * Verifiy: 52 + 48 = 100; 100 % == 0 is true.
+So this card number is valid   
 
 ## Installation instruction
 
