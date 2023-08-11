@@ -8,13 +8,13 @@ using namespace std;
 int main(){
     
 int i = 0;
-int j = 0;
 
 //var for card number
 long num = 0;
 
 //all the variables for Luhn's algorithm
 int Luhn = 0;
+int Luhn1 = 0;
 int tp = 0;
 
 //var created because of a segmentation fault
@@ -67,8 +67,10 @@ vector <int> creditCard;
                         push /= 10;
                         }
                         luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
-                        tp = luhnt[j]+luhnt[j+1];                       
+                        for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
+                        tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
+                        }                     
                     }
                 
                     else {
@@ -89,8 +91,10 @@ vector <int> creditCard;
                         push /= 10;
                         }
                         luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
-                        tp = luhnt[j]+luhnt[j+1];                        
+                        for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
+                        tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
+                        }
                     }
                 
                     else {
@@ -107,8 +111,9 @@ vector <int> creditCard;
         
         //Add all the even and all the odds
         
-        for(i = 0; i <= luhn.size() || luhn1.size(); i++){
-            Luhn = Luhn + luhn[i] + luhn1[i];
+        for(i = 0; i <= luhn.size() && luhn1.size(); i++){
+            Luhn1 = luhn[i] + luhn1[i];
+            Luhn = Luhn + Luhn1;
 
         } 
 
