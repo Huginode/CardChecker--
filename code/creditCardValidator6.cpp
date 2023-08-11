@@ -66,7 +66,9 @@ vector <int> creditCard;
                         luhnt.push_back(push % 10);
                         push /= 10;
                         }
+                        
                         luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
+                        
                         for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
                         tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
@@ -90,7 +92,9 @@ vector <int> creditCard;
                         luhnt.push_back(push % 10);
                         push /= 10;
                         }
+                        
                         luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
+                        
                         for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
                         tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
