@@ -57,19 +57,19 @@ vector <int> creditCard;
     //Luhn's algorith :
     
 
-        for (i = 0; i <= creditCard.size(); i++){
+        for (int i = 0; i < creditCard.size(); i++){
             if(creditCard.size() % 2 == 0){
                 if(i % 2 == 0){
                     push = creditCard[i]*2;
                     if(push > 9){
-                        for (i = 3; i >= 1; i--) {
+                        for (int i = 3; i >= 1; i--) {
                         luhnt.push_back(push % 10);
                         push /= 10;
                         }
                         
                         luhnt.erase(remove(luhnt.begin(), luhnt.end(), 0), luhnt.end());
                         
-                        for(i = 0; i <= luhnt.size() / 2; i = i + 2){
+                        for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
                         tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
                         }                     
