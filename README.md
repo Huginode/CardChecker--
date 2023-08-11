@@ -44,7 +44,7 @@ Source: https://youtu.be/wsphC8V36i0?list=LL
 You can use it by downloading the creditCardValidator.cpp file and compiling it using g++ or gcc
 
 eg:
-* g++ creditCardValidator functions -o **name**
+* g++ creditCardValidator.cpp -o **name**
 
 ## Complexity
 
