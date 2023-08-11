@@ -19,6 +19,8 @@ int push = 0;
 
 //all the vectors for the luhn algorithm
 vector <int> luhn;
+vector <int> luhnt;
+vector <int> luhn1;
 vector <int> creditCard;
    
     
@@ -60,9 +62,10 @@ vector <int> creditCard;
                     push = creditCard[i]*2;
                     if(push > 9){
                         for (int i = 3; i >= 1; i--) {
-                        luhn.push_back(push % 10);
+                        luhnt.push_back(push % 10);
                         push /= 10;
                         }
+                        luhn.push_back(luhnt[i]+luhnt[i+1]);
                     }
                 
                     else {
@@ -71,7 +74,7 @@ vector <int> creditCard;
                 }
                 else {
                     push = creditCard[i];
-                    luhn.push_back(push);
+                    luhn1.push_back(push);
                 }
             }
             else {
@@ -82,6 +85,7 @@ vector <int> creditCard;
                         luhn.push_back(push % 10);
                         push /= 10;
                         }
+                        luhn.push_back(luhnt[i]+luhnt[i+1]);
                     }
                 
                     else {
@@ -90,7 +94,7 @@ vector <int> creditCard;
                 }
                 else {
                     push = creditCard[i];
-                    luhn.push_back(push);
+                    luhn1.push_back(push);
                 }
             }
 
@@ -98,8 +102,8 @@ vector <int> creditCard;
         
         //Add all the even and all the odds
         
-        for(i = 0; i <= luhn.size(); i++){
-            Luhn = Luhn + luhn[i];
+        for(i = 0; i <= luhn.size() || luhn1.size(); i++){
+            Luhn = Luhn + luhn[i] + luhn1[i];
 
         } 
 
