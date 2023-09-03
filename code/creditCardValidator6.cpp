@@ -112,6 +112,7 @@ vector <int> creditCard;
             }
 
         }
+        luhn.erase(luhn.end() - 2);
         
         //Add all the even and all the odds
         
