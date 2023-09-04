@@ -117,10 +117,13 @@ vector <int> creditCard;
         //Add all the even and all the odds
         
         for(i = 0; i <= luhn.size() && luhn1.size(); i++){
-            Luhn1 = luhn[i] + luhn1[i];
-            Luhn = Luhn + Luhn1;
+            Luhn = Luhn + luhn[i];
+            Luhn1 = Luhn1 + luhn1[i];
 
-        } 
+        }
+
+        Luhn = Luhn - luhn[luhn.size() - 1];
+        tp = Luhn + Luhn1;
 
         if(Luhn % 10 == 0){
             cout << "Your card number " << snum << " is valid.\n";
