@@ -10,13 +10,6 @@
     <li><a href="#diagram">Diagram</a></li>
     <li><a href="#luhn">Luhn</a></li>
     <li><a href="#installation">Installation</a></li>
-    <li>
-      <a href="#complexity">Complexity</a>
-      <ul>
-        <li><a href="#time">Time</a></li>
-        <li><a href="#space">Space</a></li>
-      </ul>
-    </li>
     <li><a href="#issues">Issues</a></li>
   </ol>
 </details>
@@ -47,15 +40,7 @@ You can use it by downloading the creditCardValidator.cpp file and compiling it 
 eg:
 * g++ creditCardValidator.cpp -o **name**
 
-## Complexity
-
-  ### Time Complexity
-  Since the algorithm consists primarily on looping over an array the time complexity of the algorithm is :
-  * O(n)
-
-  ### Space Complexity
-
 ## Known Issues
 
-* The numbers given to the algorithm are incorrect which makes the result false.
+* The part of the algorith with the luhn vector has a bug. currently fixing it
 
