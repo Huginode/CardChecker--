@@ -112,6 +112,9 @@ vector <int> creditCard;
             }
 
         }
+        
+        // The vector luhn is bugged for an unkown reason this is how I solved it
+        
         luhn.erase(luhn.end() - 2);
         
         //Add all the even and all the odds
@@ -122,10 +125,14 @@ vector <int> creditCard;
 
         }
 
+        // The for loop prints the last value of luhn twice, so I just substract it once 
+        
         Luhn = Luhn - luhn[luhn.size() - 1];
+        
+        
         tp = Luhn + Luhn1;
 
-        if(Luhn % 10 == 0){
+        if(tp % 10 == 0){
             cout << "Your card number " << snum << " is valid.\n";
         }
         else {
