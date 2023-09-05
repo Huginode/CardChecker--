@@ -7,7 +7,6 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#description">Description</a></li>
-    <li><a href="#diagram">Diagram</a></li>
     <li><a href="#luhn">Luhn</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#issues">Issues</a></li>
@@ -17,10 +16,6 @@
 ## Description
 
 CardChecker++ is a credit card validator written in c++. I implemented luhn's algorithm using the built-in vector library in c++.
-
-## Diagram
-  
- <a href="url"><img src="images/diagram.png" width="640" height="300" style="border-radius:90%"></a>
 
 ## Luhn's algorithm
 
