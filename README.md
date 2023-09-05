@@ -42,5 +42,5 @@ eg:
 
 ## Known Issues
 
-* The part of the algorith with the luhn vector has a bug. currently fixing it
+* There is a bug in the algo when it needs to sum the duble of 5
 
