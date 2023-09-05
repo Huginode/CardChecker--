@@ -57,7 +57,7 @@ vector <int> creditCard;
     //Luhn's algorith :
     
 
-        for (int i = 0; i < creditCard.size(); i++){
+        for (i = 0; i < creditCard.size(); i++){
             if(creditCard.size() % 2 == 0){
                 if(i % 2 == 0){
                     push = creditCard[i]*2;
@@ -72,7 +72,8 @@ vector <int> creditCard;
                         for(int i = 0; i <= luhnt.size() / 2; i = i + 2){
                         tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
-                        }                     
+                        }
+                    luhnt.erase(luhnt.begin(), luhnt.end());                 
                     }
                 
                     else {
@@ -99,6 +100,7 @@ vector <int> creditCard;
                         tp = luhnt[i]+luhnt[i+1];                        
                         luhn.push_back(tp);
                         }
+                    luhnt.erase(luhnt.begin(), luhnt.end());
                     }
                 
                     else {
@@ -113,10 +115,6 @@ vector <int> creditCard;
 
         }
         
-        // The vector luhn is bugged for an unkown reason this is how I solved it
-        
-        luhn.erase(luhn.end() - 2);
-        
         //Add all the even and all the odds
         
         for(i = 0; i <= luhn.size() && luhn1.size(); i++){
@@ -125,11 +123,6 @@ vector <int> creditCard;
 
         }
 
-        // The for loop prints the last value of luhn twice, so I just substract it once 
-        
-        Luhn = Luhn - luhn[luhn.size() - 1];
-        
-        
         tp = Luhn + Luhn1;
 
         if(tp % 10 == 0){
